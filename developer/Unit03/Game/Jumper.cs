@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 namespace Unit03.Game
 {
-    public class Jumper{
+    public class Jumper
+    {
         private List<string> jumper = new List<string>();
         private int count;
         private int trueTries = 0;
 
 
+        // Draw the jumper with a parachute
         public Jumper()
         {
             jumper.Add("  ___");
@@ -20,6 +22,7 @@ namespace Unit03.Game
             jumper.Add("  / \\");
         }
 
+        // Verify if the current guess is the same of a previous guess.
         public bool checkInput(List<char> guesses, string currentguess){
             if (guesses.Contains(currentguess[0])){
                 Console.WriteLine("You already guessed that letter!");
@@ -31,13 +34,14 @@ namespace Unit03.Game
 
         }
 
+        // Verify if the user can continue gessing. 
         public bool checkJumper(List<char> wordGuess, int tries){
             count = 0;
             for(int i=0;i<wordGuess.Count;i++){
                 if (wordGuess[i] != '_'){
                     count++;
                 }
-                else{}
+                else{} // *
             }
             if (count == wordGuess.Count){
                 return false;
@@ -51,6 +55,7 @@ namespace Unit03.Game
             }
         }
 
+        // Remove parts of the draw when guess is incorrect and put "X" when finish the tries.
         public void printJumper(int tries){
             if (tries == trueTries){
 
