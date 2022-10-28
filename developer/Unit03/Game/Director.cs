@@ -90,6 +90,7 @@ namespace Unit03.Game
             }
             else {
                 jumper.printJumper(tries);
+                Console.WriteLine("The answer is:");
                 hiddenWord.printAnswer();
                 Console.WriteLine("\n");
             }

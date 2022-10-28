@@ -10,7 +10,7 @@ namespace Unit03.Game
         private int trueTries = 0;
 
 
-        // Draw the jumper with a parachute
+        // Draw the jumper with a parachute.
         public Jumper()
         {
             jumper.Add("  ___");
@@ -20,9 +20,11 @@ namespace Unit03.Game
             jumper.Add("   O");
             jumper.Add("  /|\\");
             jumper.Add("  / \\");
+            jumper.Add(" ");
+            jumper.Add("^^^^^^^");
         }
 
-        // Verify if the current guess is the same of a previous guess.
+        // Validate if the current guess is already guessed. Verifying the list of the previous guesses with the current guess.
         public bool checkInput(List<char> guesses, string currentguess){
             if (guesses.Contains(currentguess[0])){
                 Console.WriteLine("You already guessed that letter!");
@@ -34,14 +36,14 @@ namespace Unit03.Game
 
         }
 
-        // Verify if the user can continue gessing. 
+        // Verify if the user has guessed less than 4 tries. Creates a list of the count of the guess tries to compare with the tries.
         public bool checkJumper(List<char> wordGuess, int tries){
             count = 0;
             for(int i=0;i<wordGuess.Count;i++){
-                if (wordGuess[i] != '_'){
+                if (wordGuess[i] != '_'){ //*
                     count++;
                 }
-                else{} // *
+                else{} //*
             }
             if (count == wordGuess.Count){
                 return false;
@@ -55,15 +57,16 @@ namespace Unit03.Game
             }
         }
 
-        // Remove parts of the draw when guess is incorrect and put "X" when finish the tries.
+        // Remove parts of the list that contains the draw when guess is incorrect, and put "X" when finish the tries.
         public void printJumper(int tries){
             if (tries == trueTries){
 
             }
             else if(tries == 4){
                 jumper.RemoveRange(0,1);
-                jumper[0] = "   X";
-
+                jumper[0] = "   x";
+                Console.WriteLine("Game Over");
+                Console.WriteLine(" ");
 
             }
             else{
