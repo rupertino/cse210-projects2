@@ -52,7 +52,7 @@ namespace Unit03.Game
 
         private void StartUp()
         {
-            Console.WriteLine("\nHint: The Book of Mormon");
+            Console.WriteLine(" ");
             chosenWord = hiddenWord.pullWord();
             hiddenWord.listWord(chosenWord);
             hiddenWord.createHiddenWord();
@@ -68,10 +68,7 @@ namespace Unit03.Game
                 checkInput = jumper.checkInput(guessedLetters, currentGuess);
             }
             guessedLetters.Add(currentGuess[0]);
-            
-
         }
-
 
         private void DoUpdates()
         {
@@ -80,7 +77,6 @@ namespace Unit03.Game
             tries = tries + usedTries;
             isPlaying = jumper.checkJumper(hiddenWord.guess, tries);
         }
-
 
         private void DoOutputs()
         {
