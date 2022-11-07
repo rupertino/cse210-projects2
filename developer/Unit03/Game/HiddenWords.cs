@@ -8,7 +8,6 @@ namespace Unit03.Game
         public string hiddenword;
         List<char> answer = new List<char>();
         public List<char> guess = new List<char>();
-
         
         // Creates a new instance of HiddenWord
         public HiddenWord()
@@ -50,13 +49,11 @@ namespace Unit03.Game
                 return 0;}
             else {
                 return 1;}
-
         }
 
         // Print the hidden word.
         public void printAnswer(){
             Console.WriteLine(string.Format("{0}", string.Join(" ", answer)));
         }
-
     };
 }
