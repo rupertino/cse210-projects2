@@ -32,7 +32,7 @@ namespace Unit05.Game
 
         public static Color BLUE = new Color(0, 0, 255);
 
-        public static Color HEADBLUE = new Color(0, 100, 255);
+        public static Color HEADGREEN = new Color(0, 255, 0);
 
     }
 }
