@@ -30,7 +30,8 @@ namespace Unit05.Game.Scripting
             List<Actor> segments2 = cycletwo.GetSegments();
             Actor onescore = cast.GetFirstActor("onescore");
             Actor twoscore = cast.GetFirstActor("twoscore");
-            twoscore.SetPosition(new Point(Constants.MAX_X -100, 0));
+            onescore.SetPosition(new Point(Constants.MAX_X -850, 0));
+            twoscore.SetPosition(new Point(Constants.MAX_X -150, 0));
             List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();

@@ -140,7 +140,7 @@ namespace Unit05.Game.Scripting
                         cast.AddActor("messages", message);
 
                         segment.SetColor(Constants.WHITE);
-                        message.SetColor(Constants.BLUE);
+                        message.SetColor(Constants.GREEN);
                     }
                 }
                 if (CycleTwoLoose == true)
