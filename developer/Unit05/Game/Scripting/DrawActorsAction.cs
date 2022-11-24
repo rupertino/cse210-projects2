@@ -22,7 +22,7 @@ namespace Unit05.Game.Scripting
         }
 
         /// <inheritdoc/>
-        public void Execute(Cast cast, Script script)
+        public override void Execute(Cast cast, Script script)
         {
             CycleOne cycleone = (CycleOne)cast.GetFirstActor("cycleone");
             List<Actor> segments1 = cycleone.GetSegments();

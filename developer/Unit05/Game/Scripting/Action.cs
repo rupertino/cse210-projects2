@@ -18,6 +18,8 @@ namespace Unit05.Game.Scripting
         /// </summary>
         /// <param name="cast">The cast of actors.</param>
         /// <param name="script">The script of actions.</param>
-        void Execute(Cast cast, Script script);
+        public virtual void Execute(Cast cast, Script script)
+        {
+        }
     }
 }

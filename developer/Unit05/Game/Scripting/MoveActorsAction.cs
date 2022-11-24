@@ -33,7 +33,7 @@ namespace Unit05.Game.Scripting
     //    a) get all the actors from the cast
     //    b) loop through all the actors
     //    c) call the MoveNext() method on each actor.
-        public void Execute(Cast cast, Script script){
+        public override void Execute(Cast cast, Script script){
             List<Actor> actors = cast.GetAllActors();
             foreach(Actor actor in actors){
                 actor.MoveNext();

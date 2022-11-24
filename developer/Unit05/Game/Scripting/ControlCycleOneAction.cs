@@ -24,7 +24,7 @@ namespace Unit05.Game.Scripting
         }
 
         /// <inheritdoc/>
-        public void Execute(Cast cast, Script script)
+        public override void Execute(Cast cast, Script script)
         {
             // left
             if (keyboardService.IsKeyDown("a"))
