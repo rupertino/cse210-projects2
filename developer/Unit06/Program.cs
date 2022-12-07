@@ -46,19 +46,19 @@ namespace Unit05
         Comment comment2 = new Comment();
         comment2.Name = "Rodrigo";
         comment2.comment = "is good";
-        video2.comments.Add(comment1);
+        video2.comments.Add(comment2);
 
 
         comment2 = new Comment();
         comment2.Name = "Pedro";
         comment2.comment = "Is bad";
-        video2.comments.Add(comment1);
+        video2.comments.Add(comment2);
 
 
         comment2 = new Comment();
         comment2.Name = "Juan";
         comment2.comment = "Is broken";
-        video2.comments.Add(comment1);
+        video2.comments.Add(comment2);
         videos.Add(video2);
 
         Video video3 = new Video();
@@ -71,19 +71,19 @@ namespace Unit05
         Comment comment3 = new Comment();
         comment3.Name = "Rodrigo";
         comment3.comment = "is good";
-        video3.comments.Add(comment1);
+        video3.comments.Add(comment3);
 
 
         comment3 = new Comment();
         comment3.Name = "Pedro";
         comment3.comment = "Is bad";
-        video3.comments.Add(comment1);
+        video3.comments.Add(comment3);
 
 
         comment3 = new Comment();
         comment3.Name = "Juan";
         comment3.comment = "Is broken";
-        video3.comments.Add(comment1);
+        video3.comments.Add(comment3);
         videos.Add(video3);
 
         int countvideo = 0;
@@ -92,6 +92,7 @@ namespace Unit05
         {
             countvideo++;
 
+            Console.WriteLine("");
             Console.WriteLine("Video number: " + countvideo);
             Console.WriteLine(" ");
             Console.WriteLine("Title: " + video.Title + " Autor: " + video.Autor + "Time: " + video.Length);
