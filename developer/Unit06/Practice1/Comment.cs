@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 public class Comment
-{
-    public string _nameOfCommenter;
-    public string _text;
-}
+    {
+        public string Name { get; set; }
+        public string comment { get; set; }
+    }
