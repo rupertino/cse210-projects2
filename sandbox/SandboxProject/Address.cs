@@ -33,10 +33,10 @@ namespace SandboxProject
         public string FormaterAddress() 
         {
 
-            string address = $"Street: {_street}" +
-                $" City: {_city} " +
-                $"Satate: {_state} " +
-                $"Counry: {_country}"; 
+            string address = $"Street: {_street}," +
+                $" City: {_city}, " +
+                $"Satate: {_state}, " +
+                $"Country: {_country},"; 
 
             return address;
 

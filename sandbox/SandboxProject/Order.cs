@@ -21,7 +21,7 @@ namespace SandboxProject
 
             double pricetotal = 0;
 
-            string send = $"Direccion: {address}***** Name:{nombre} ";
+            string send = $"Address: {address}***** Name: {nombre} ";
 
             foreach (string product in products)
             {
@@ -40,8 +40,9 @@ namespace SandboxProject
                 pricetotal = international + pricetotal;
 
 
-            Console.WriteLine("Send ***************" + send);
-            Console.WriteLine("total ***************" + pricetotal);
+            Console.WriteLine("Send to ***************" + send);
+            Console.WriteLine("Total ***************" + "$"+pricetotal);
+            Console.WriteLine("");
 
 
 
