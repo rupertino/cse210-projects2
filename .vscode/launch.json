@@ -264,6 +264,30 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
-        }        
+        },
+        {
+            "name": "Developer - Inheritance",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-developer-inheritance",
+            "program": "${workspaceFolder}/developer/Inheritance/bin/Debug/net6.0/Inheritance.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/developer/Inheritance",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Developer - Polyphormism",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-developer-polyphormism",
+            "program": "${workspaceFolder}/developer/Polyphormism/bin/Debug/net6.0/Polyphormism.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/developer/Polyphormism",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "stopAtEntry": false
+        }               
     ]
 }
