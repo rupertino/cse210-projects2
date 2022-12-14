@@ -29,16 +29,16 @@ namespace SandboxProject
             products.Add(result);
 
             Customer customer = new Customer();
-            customer.Name("Pedro");
-            customer.Street("Tarata ST 401");
-            customer.State("California");
-            customer.City("San diego");
-            customer.Country("Usa");
+            customer.SetName("Pedro");
+            customer._address.SetStreet("Tarata ST 401");
+            customer._address.SetState("California");
+            customer._address.SetState("San diego");
+            customer._address.SetCountry("Usa");
             bool isUsa = customer.isUsa();
             string name = customer.NameReturn();
-            string address = customer.FormaterAddress();
+            string address = customer.FormatedAddress();
 
-            order.CoutnOrder(name, isUsa, products, address);
+            order.GetOrderTotal(name, isUsa, products, address);
 
             products = new List<string>();
             order = new Order();
@@ -61,16 +61,16 @@ namespace SandboxProject
             products.Add(result);
 
             customer = new Customer();
-            customer.Name("Juan");
-            customer.Street("Ocotlan 16");
-            customer.State("BC");
-            customer.City("Tijuana");
-            customer.Country("Mexico");
+            customer.SetName("Juan");
+            customer._address.SetStreet("Ocotlan 16");
+            customer._address.SetState("BC");
+            customer._address.SetCity("Tijuana");
+            customer._address.SetCountry("Mexico");
             isUsa = customer.isUsa();
             name = customer.NameReturn();
-            address = customer.FormaterAddress();
+            address = customer.FormatedAddress();
 
-            order.CoutnOrder(name, isUsa, products, address);
+            order.GetOrderTotal(name, isUsa, products, address);
 
         }
     }

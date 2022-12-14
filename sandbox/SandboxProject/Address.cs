@@ -12,15 +12,55 @@ namespace SandboxProject
 
         private string _countryUsa = "usa";
 
+        public string GetStreet()
+        {
+            return _street;
+        }
+        public string GetCity()
+        {
+            return _city;
+        }
+        public string GetState()
+        {
+            return _state;
+        }
+        public string GetCountry()
+        {
+            return _country;
+        }
+        public string GetCountryUsa()
+        {
+            return _countryUsa;
+        }
+
+        public void SetStreet(string newStreet)
+        {
+            _street = newStreet;
+        }
+        public void SetCity(string newCity)
+        {
+            _city = newCity;
+        }
+        public void SetState(string newState)
+        {
+            _street = newState;
+        }
+        public void SetCountry(string newCountry)
+        {
+            _country = newCountry;
+        }
+
         public bool isUsa() 
         {
             bool isUsa = false;
 
-            if (_country.ToLower() == _countryUsa.ToLower())
+            if (GetCountry().ToLower() == _countryUsa.ToLower())
                 isUsa = true;
             
             return isUsa;
         }
+
+        // Agregar setter y getters y llamar las variables a traves de los getters. Con eso queda completo el requerimiento.
 
         public void Street(string street) { _street = street; }
 
@@ -30,7 +70,7 @@ namespace SandboxProject
 
         public void Country(string country) { _country = country; }
 
-        public string FormaterAddress() 
+        public string FormatedAddress() 
         {
 
             string address = $"Street: {_street}," +

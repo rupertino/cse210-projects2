@@ -2,7 +2,7 @@
 
 namespace SandboxProject
 {
-    public  class Customer
+    public class Customer
     {      
         private string _name;
         public Address _address;
@@ -12,20 +12,25 @@ namespace SandboxProject
             _address = new Address();
         }
 
-        public void Name(string name) { _name = name; }
+        // hace falta agregarle los getters y seter a name
+        // Hace falta agregar un metodo que use el metodo de Address para saber si vive en Usa o no.
 
-        public void Street(string street) { _address.Street(street); }
-
-        public void City(string city) { _address.City(city); }
-
-        public void State(string state) { _address.State(state);  }
-
-        public void Country(string country) { _address.Country(country);}
-
-        public string FormaterAddress() => _address.FormaterAddress();
+        public string GetName()
+        {
+            return _name;
+        }
+        
+        public void SetName(string newName)
+        {
+            _name = newName;
+        }
+    
+        
+        public string FormatedAddress() => _address.FormatedAddress();
 
         public string NameReturn() => _name;
 
+        // Method to validate if is customer country is Usa. Calling the method from Adress Calss.
         public bool isUsa() => _address.isUsa();
         
     }

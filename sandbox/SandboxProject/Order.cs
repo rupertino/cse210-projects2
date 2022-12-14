@@ -5,16 +5,25 @@ namespace SandboxProject
 {
     public  class Order
     {
-        public Product _products;
+        
+        // Contain a list of products and a customer.
+        
+        // Method to return a string for the packing label. Shoud contain name, product id of each product in the order.
+        // Method to return a string for the shipping label. Shoul contain name and address of the customer.
+        public List<string> _productsOfCustomer; 
+        public Product _product;
         public Customer _customer;
 
         public Order()
         {      
-            _products = new Product();
+            _product = new Product();
             _customer = new Customer();
         } 
         
-        public void CoutnOrder(string nombre, bool isUsa, List<string> products, string address)
+        // 1.Method to calculate the total cost of the order. The total price is
+        // 2.calculate as the sum of the prices of each product + one time shipping cost.
+        // 3. If the customer is in usa shipping is $5 otherwise is $35.
+        public void GetOrderTotal(string nombre, bool isUsa, List<string> products, string address)
         {
             int usa = 5;
             int international = 35;
@@ -43,8 +52,6 @@ namespace SandboxProject
             Console.WriteLine("Send to ***************" + send);
             Console.WriteLine("Total ***************" + "$"+pricetotal);
             Console.WriteLine("");
-
-
 
         }
     }
